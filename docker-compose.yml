@@ -289,6 +289,7 @@ services:
 
   node:
     image: node:${NODE_VERSION}
+    container_name: node
     environment:
       - NODE_ENV=production
     volumes:
