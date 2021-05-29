@@ -359,7 +359,7 @@ services:
       - '8989:8080'
       - '50000:50000'
     volumes:
-      - '/var/jenkins_home:/var/jenkins_home'
+      - '/data/jenkins:/var/jenkins'
 
 networks:
   default:
