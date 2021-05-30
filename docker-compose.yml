@@ -360,24 +360,25 @@ services:
       - '${JENKINS_HOST_PORT}:8080'
       - '${JENKINS_HOST_PORT_S}:50000'
     volumes:
-      - '${JENKINS_CONFIG}:/www/jenkins'
-      - '${JENKINS_HOME}:/var/jenkins_home'
+      - '${SOURCE_DIR}:/www'
+      - '${JENKINS_HOME_DIR}:/var/jenkins_home'
+      - '${JENKINS_LOG_DIR}:/var/log'
     networks:
       - default
 
 
-  goaccess:
-    image: 'allinurl/goaccess:latest'
-    container_name: goaccess
-    restart: always
-    ports:
-      - '${GOACCESS_HOST_PORT}:7890'
-    networks:
-      - default
-    volumes:
-      - '${GOACCESS_CONFIG}:/srv/data'
-      - '${GOACCESS_HTML_PATH}:/srv/report'
-      - '${GOACCESS_LOG}:/srv/logs'
+#  goaccess:
+#    image: 'allinurl/goaccess:latest'
+#    container_name: goaccess
+#    restart: always
+#    ports:
+#      - '${GOACCESS_HOST_PORT}:7890'
+#    networks:
+#      - default
+#    volumes:
+#      - '${GOACCESS_CONFIG}:/srv/data'
+#      - '${GOACCESS_HTML_PATH}:/srv/report'
+#      - '${GOACCESS_LOG}:/srv/logs'
 
 
 networks:
