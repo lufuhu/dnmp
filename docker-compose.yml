@@ -366,18 +366,18 @@ services:
       - default
 
 
-#  goaccess:
-#    image: 'allinurl/goaccess:latest'
-#    container_name: goaccess
-#    restart: always
-#    ports:
-#      - '${GOACCESS_HOST_PORT}:7890'
-#    networks:
-#      - default
-#    volumes:
-#      - '${GOACCESS_CONFIG}:/srv/data'
-#      - '${GOACCESS_HTML_PATH}:/srv/report'
-#      - '${GOACCESS_LOG}:/srv/logs'
+  goaccess:
+    image: 'allinurl/goaccess:latest'
+    container_name: goaccess
+    restart: always
+    ports:
+      - '${GOACCESS_HOST_PORT}:7890'
+    networks:
+      - default
+    volumes:
+      - '${GOACCESS_CONFIG}:/srv/data'
+      - '${GOACCESS_HTML_PATH}:/srv/report'
+      - '${GOACCESS_LOG}:/srv/logs'
 
 
 networks:
