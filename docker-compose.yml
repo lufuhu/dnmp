@@ -351,20 +351,20 @@ services:
   #    depends_on:
   #      - mysql
 
-  jenkins:
-    image: 'jenkins/jenkins:latest'
-    container_name: jenkins
-    restart: always
-    user: root
-    ports:
-      - '${JENKINS_HOST_PORT}:8080'
-      - '${JENKINS_HOST_PORT_S}:50000'
-    volumes:
-      - '${SOURCE_DIR}:/www'
-      - '${JENKINS_HOME_DIR}:/var/jenkins_home'
-      - '${JENKINS_LOG_DIR}:/var/log'
-    networks:
-      - default
+#  jenkins:
+#    image: 'jenkins/jenkins:latest'
+#    container_name: jenkins
+#    restart: always
+#    user: root
+#    ports:
+#      - '${JENKINS_HOST_PORT}:8080'
+#      - '${JENKINS_HOST_PORT_S}:50000'
+#    volumes:
+#      - '${SOURCE_DIR}:/www'
+#      - '${JENKINS_HOME_DIR}:/var/jenkins_home'
+#      - '${JENKINS_LOG_DIR}:/var/log'
+#    networks:
+#      - default
 
 
 #  goaccess:
